@@ -20,7 +20,7 @@
             color: #ffffff;
         }
 
-        /* Menu Orizzontale a 9 Pulsanti + Panoramica */
+        /* Menu Orizzontale a 9 Pulsanti + Home */
         nav {
             background-color: #2c3e50;
             box-shadow: 0 2px 10px rgba(0,0,0,0.3);
@@ -63,6 +63,22 @@
         .menu button.active {
             background-color: #3498db;
             color: #ffffff;
+        }
+
+        /* Stile specifico Verde per il Tasto Home */
+        .menu button.home-btn {
+            background-color: #27ae60;
+            color: #ffffff;
+        }
+
+        .menu button.home-btn:hover {
+            background-color: #2ecc71;
+            color: #ffffff;
+        }
+
+        .menu button.home-btn.active {
+            background-color: #2ecc71;
+            box-shadow: inset 0 -3px 0 #ffffff;
         }
 
         /* Contenitore Principale */
@@ -127,12 +143,12 @@
         .home-title {
             margin-bottom: 20px;
             font-size: 24px;
-            color: #3498db;
+            color: #2ecc71;
         }
 
         .preview-grid {
             display: grid;
-            grid-template-columns: repeat(3, 1fr); /* Disposizione fissa 3x3 per desktop */
+            grid-template-columns: repeat(3, 1fr); /* Disposizione 3x3 per desktop */
             gap: 20px;
         }
 
@@ -203,10 +219,10 @@
 </head>
 <body>
 
-    <!-- Menu Orizzontale a 9 Pulsanti + Panoramica -->
+    <!-- Menu Orizzontale a 9 Pulsanti + Home Verde -->
     <nav>
         <ul class="menu">
-            <li><button class="nav-btn active" onclick="showPage('home', this)">Panoramica</button></li>
+            <li><button class="nav-btn home-btn active" onclick="showPage('home', this)">Home</button></li>
             <li><button class="nav-btn" onclick="showPage('windy', this)">Windy</button></li>
             <li><button class="nav-btn" onclick="showPage('windfinder', this)">Windfinder</button></li>
             <li><button class="nav-btn" onclick="showPage('earth-nullschool', this)">Earth Nullschool</button></li>
@@ -222,7 +238,7 @@
     <!-- Contenitore Pagine -->
     <div class="main-container">
         
-        <!-- Pagina 0: Panoramica / Preview (Griglia 3 x 3) -->
+        <!-- Pagina 0: Home / Preview (Griglia 3 x 3) -->
         <div id="home" class="page active">
             <div class="home-content">
                 <h2 class="home-title">Dashboard di Navigazione Nautica & Meteo</h2>
