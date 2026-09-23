@@ -3,116 +3,106 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Spaceship Earth</title>
-    
-    <!-- Importazione di un font pulito (sans-serif) ed elegante da Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
-    
+    <title>Voyager's Cosmos</title>
+    <!-- Importazione del font Montserrat -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&display=swap" rel="stylesheet">
     <style>
-        /* Reset di base */
+        /* Reset dei margini di default */
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
 
-        body, html {
-            height: 100%;
-            font-family: 'Montserrat', sans-serif; /* Font pulito sans-serif */
-        }
-
-        /* Configurazione dello sfondo fisso */
+        /* Impostazioni dello sfondo e della struttura centrale */
         body {
-            background-image: url('bg.png');
+            font-family: 'Montserrat', sans-serif;
+            background-image: url('bg.png'); /* Cerca il file bg.png nella stessa cartella */
             background-size: cover;
             background-position: center;
             background-attachment: fixed;
             background-repeat: no-repeat;
-            background-color: #000; /* Colore di fallback scuro */
-        }
-
-        /* Contenitore principale per centrare tutto verticalmente e orizzontalmente */
-        .landing-container {
+            color: #ffffff;
+            height: 100vh;
             display: flex;
-            flex-direction: column;
             justify-content: center;
             align-items: center;
-            height: 100%;
-            width: 100%;
-            /* Leggera ombra di sfondo per far risaltare il testo bianco sull'immagine spaziale */
-            background-color: rgba(0, 0, 0, 0.3); 
+            overflow: hidden;
         }
 
-        /* Stile del titolo del blog (opzionale, ma consigliato per l'estetica) */
-        .site-title {
-            color: #ffffff;
-            font-size: 3rem;
-            font-weight: 300;
-            letter-spacing: 0.25em; /* Spaziatura ampia per un look "spaziale" */
-            margin-bottom: 3.5rem;
+        /* Contenitore centrale */
+        .landing-container {
             text-align: center;
-            text-shadow: 2px 2px 8px rgba(0,0,0,0.8);
+            padding: 20px;
+        }
+
+        /* Titolo del Blog */
+        h1 {
+            font-size: 3.5rem;
+            font-weight: 300;
+            letter-spacing: 3px;
+            margin-bottom: 30px;
             text-transform: uppercase;
+            text-shadow: 0 0 15px rgba(0, 0, 0, 0.8);
         }
 
-        /* Contenitore del menu */
-        .nav-menu {
+        /* Menu di navigazione */
+        nav {
             display: flex;
-            gap: 2rem; /* Spazio orizzontale tra i bottoni */
+            gap: 20px;
+            justify-content: center;
         }
 
-        /* Stile dei bottoni / link */
-        .nav-btn {
-            display: inline-block;
-            color: #ffffff;
+        /* Stile dei bottoni del menu */
+        nav a {
             text-decoration: none;
-            text-transform: uppercase; /* Testo in maiuscolo */
-            border: 1px solid #ffffff; /* Bordo bianco */
-            padding: 14px 40px;
-            font-size: 0.9rem;
-            font-weight: 400;
-            letter-spacing: 0.15em;
-            background-color: transparent;
-            transition: all 0.4s ease; /* Transizione morbida per l'hover */
-            backdrop-filter: blur(2px); /* Leggero effetto vetro */
-        }
-
-        /* Effetto Hover sui bottoni */
-        .nav-btn:hover {
-            background-color: rgba(255, 255, 255, 0.15); /* Sfondo leggermente bianco */
             color: #ffffff;
-            box-shadow: 0 0 15px rgba(255, 255, 255, 0.2); /* Leggero bagliore */
-            transform: translateY(-2px); /* Si sposta leggermente in alto */
+            font-size: 1.1rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            padding: 12px 28px;
+            border: 1px solid rgba(255, 255, 255, 0.8);
+            border-radius: 4px;
+            background: rgba(0, 0, 0, 0.3);
+            backdrop-filter: blur(4px);
+            transition: all 0.3s ease;
         }
 
-        /* Design responsivo per smartphone */
-        @media (max-width: 768px) {
-            .nav-menu {
-                flex-direction: column; /* Impila i bottoni in verticale sui telefoni */
-                gap: 1.5rem;
+        /* Effetto al passaggio del mouse sui bottoni */
+        nav a:hover {
+            background-color: #ffffff;
+            color: #000000;
+            box-shadow: 0 0 15px rgba(255, 255, 255, 0.6);
+            transform: translateY(-2px);
+        }
+
+        /* Adattamento per dispositivi mobili */
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 2.2rem;
             }
-            .site-title {
-                font-size: 2rem;
-                letter-spacing: 0.15em;
+
+            nav {
+                flex-direction: column;
+                gap: 12px;
             }
-            .nav-btn {
-                text-align: center;
-                width: 220px; /* Larghezza fissa sui telefoni per uniformità */
+
+            nav a {
+                width: 100%;
             }
         }
     </style>
 </head>
 <body>
+
     <div class="landing-container">
-        
-        <h1 class="site-title">Voyager's Cosmos</h1>
-        
-<nav>
-    <a href="index.html">Intro</a>
-    <a href="projects.html">Projects</a>
-    <a href="about.html">About</a>
-</nav>
-        
+        <h1>Voyager's Cosmos</h1>
+        <nav>
+            <a href="index.html">Intro</a>
+            <a href="projects.html">Projects</a>
+            <a href="about.html">About</a>
+        </nav>
     </div>
+
 </body>
 </html>
