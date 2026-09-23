@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - Voyager's Cosmos</title>
+    <!-- Importazione del font Montserrat -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+    <style>
+        /* Reset di base */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Impostazioni del corpo della pagina e dello sfondo */
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-image: url('bg.png');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            color: #ffffff;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        /* Intestazione in alto con titolo e menu */
+        header {
+            width: 100%;
+            text-align: center;
+            padding: 40px 20px 20px 20px;
+            background: rgba(0, 0, 0, 0.4);
+            backdrop-filter: blur(5px);
+        }
+
+        h1 {
+            font-size: 3rem;
+            letter-spacing: 2px;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            font-weight: 300;
+        }
+
+        /* Stile del Menu */
+        nav {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #ffffff;
+            font-size: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            padding: 10px 20px;
+            border: 1px solid #ffffff;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+        }
+
+        /* Effetto hover e stato attivo */
+        nav a:hover, nav a.active {
+            background-color: #ffffff;
+            color: #000000;
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+        }
+
+        /* Contenitore principale per centrare la scheda */
+        main {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            padding: 40px 20px;
+        }
+
+        /* La scheda nera centrale */
+        .content-card {
+            background-color: #000000;
+            width: 50vw; /* Larga esattamente il 50% dello schermo */
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.7);
+            text-align: left;
+        }
+
+        /* Sezione superiore: Foto + Info affiancate */
+        .profile-header {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+            margin-bottom: 30px;
+            padding-bottom: 25px;
+            border-bottom: 1px solid #333333;
+        }
+
+        .profile-img {
+            width: 160px;
+            height: 160px;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 2px solid #ffffff;
+            flex-shrink: 0;
+            box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+        }
+
+        .profile-details {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .profile-details h2 {
+            font-size: 1.8rem;
+            font-weight: 400;
+            letter-spacing: 1px;
+            color: #ffffff;
+        }
+
+        .profile-details .titles {
+            font-size: 0.95rem;
+            color: #cccccc;
+            line-height: 1.5;
+            font-weight: 300;
+        }
+
+        .profile-details .contact {
+            margin-top: 8px;
+            font-size: 0.9rem;
+            color: #aaaaaa;
+            line-height: 1.5;
+        }
+
+        .profile-details .contact a {
+            color: #ffffff;
+            text-decoration: none;
+            transition: color 0.2s ease;
+        }
+
+        .profile-details .contact a:hover {
+            text-decoration: underline;
+            color: #88c0ff;
+        }
+
+        /* Sezione Descrizione / Profile */
+        .profile-bio h3 {
+            font-size: 1.2rem;
+            font-weight: 400;
+            color: #ffffff;
+            margin-bottom: 15px;
+            letter-spacing: 1px;
+        }
+
+        .profile-bio p {
+            font-size: 0.95rem;
+            line-height: 1.7;
+            color: #dddddd;
+            text-align: justify;
+            font-weight: 300;
+        }
+
+        /* Adattamento Responsive per Tablet e Smartphone */
+        @media (max-width: 900px) {
+            .content-card {
+                width: 80vw;
+                padding: 30px;
+            }
+        }
+
+        @media (max-width: 700px) {
+            .profile-header {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .profile-details {
+                align-items: center;
+            }
+
+            .profile-bio p {
+                text-align: left;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .content-card {
+                width: 95vw;
+                padding: 20px;
+            }
+            nav {
+                flex-direction: column;
+                gap: 10px;
+            }
+            h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Voyager's Cosmos</h1>
+        <nav>
+            <a href="intro.html">Intro</a>
+            <a href="projects.html">Projects</a>
+            <a href="about.html" class="active">About</a>
+        </nav>
+    </header>
+
+    <main>
+        <div class="content-card">
+            
+            <!-- Sezione Foto e Informazioni Principali -->
+            <div class="profile-header">
+                <img src="io.png" alt="Guido Sbrogiò" class="profile-img">
+                <div class="profile-details">
+                    <h2>Guido Sbrogiò</h2>
+                    <div class="titles">
+                        Astrophysicist | Space Mission Designer<br>
+                        Space Architect | Sci-fi writer<br>
+                        SSA Analyst | EO &amp; GEOINT Consultant
+                    </div>
+                    <div class="contact">
+                        <a href="mailto:sbrogio.guido@gmail.com">sbrogio.guido@gmail.com</a> | 
+                        <a href="tel:+393490660856">(+39) 349 0660 856</a> | 
+                        <a href="https://linkedin.com/in/guidosb" target="_blank" rel="noopener">linkedin.com/in/guidosb</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sezione Profilo / Bio -->
+            <div class="profile-bio">
+                <h3>&gt;&gt; Profile</h3>
+                <p>
+                    Astrophysicist by training, I graduated in Physics at the University of Padova (IT) with a thesis carried out at the National Institute of Nuclear Physics (INFN-LNL) laboratories aimed at the design and construction of a microdosimetric detector for the International Space Station (ISS) in order to asses the biological radiation damage. I later specialised in science communication with a master's degree at the SISSA International School in Trieste. I like to explore new scientific and technological frontiers trying to bring out the social impact of scientific research. I have collaborated with the editorial staff of MediaINAF writing articles on astronomy and astrophysics. I acquired In-depth knowledge of spacecraft design for planetary remote sensing and space astrophysical observatories completing the Space Missions Science, Design and Applications (SPICES) master at the University of Bologna (IT). Planetary surface exploration and interplanetary mission design were the two key topics of my educational objectives that motivated my enrollment at the master SpacE Exploration and Development Systems (SEEDS) of the Polytechnic University of Turin with the aim of test technologies, operations and capabilities on the Moon to in order to develop and design future human mission to Mars. Currently I’m informally collaborating with the science team of the LIFE (Large Interferometer For Exoplanets) project for future research and characterisation of the biosignatures of Earth's exoplanets and for the development of new technologies for astrophysics and space engineering.
+                </p>
+            </div>
+
+        </div>
+    </main>
+
+</body>
+</html>
