@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Projects - Voyager's Cosmos</title>
-    <!-- Importazione del font Montserrat per mantenere la coerenza visiva -->
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&display=swap" rel="stylesheet">
+    <!-- Importazione del font Montserrat -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
     <style>
         /* Reset di base */
         * {
@@ -17,7 +17,7 @@
         /* Impostazioni del corpo della pagina e dello sfondo */
         body {
             font-family: 'Montserrat', sans-serif;
-            background-image: url('bg.png'); /* Assicurati che bg.png sia nella stessa cartella */
+            background-image: url('bg.png');
             background-size: cover;
             background-position: center;
             background-attachment: fixed;
@@ -33,8 +33,7 @@
             width: 100%;
             text-align: center;
             padding: 40px 20px 20px 20px;
-            /* Un leggero sfondo semitrasparente dietro l'header (opzionale) per staccare dal background */
-            background: rgba(0, 0, 0, 0.4); 
+            background: rgba(0, 0, 0, 0.4);
             backdrop-filter: blur(5px);
         }
 
@@ -65,7 +64,7 @@
             transition: all 0.3s ease;
         }
 
-        /* Effetto hover e stato "attivo" per evidenziare in che pagina ci troviamo */
+        /* Effetto hover e stato attivo */
         nav a:hover, nav a.active {
             background-color: #ffffff;
             color: #000000;
@@ -85,41 +84,93 @@
         /* La scheda nera centrale */
         .content-card {
             background-color: #000000;
-            width: 50vw; /* Larga esattamente metà della risoluzione dello schermo */
+            width: 50vw; /* Larga il 50% dello schermo */
             padding: 40px;
             border-radius: 8px;
             box-shadow: 0 15px 40px rgba(0, 0, 0, 0.7);
             text-align: left;
         }
 
-        .content-card h2 {
-            font-size: 1.5rem;
-            line-height: 1.4;
-            margin-bottom: 20px;
+        /* Titoli delle macro-sezioni */
+        .section-header {
+            font-size: 1.8rem;
             font-weight: 400;
-            border-bottom: 1px solid #333;
-            padding-bottom: 15px;
+            color: #ffffff;
+            margin-top: 30px;
+            margin-bottom: 25px;
+            border-bottom: 2px solid #444444;
+            padding-bottom: 10px;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
         }
 
-        .content-card p {
-            font-size: 1rem;
+        .section-header:first-of-type {
+            margin-top: 0;
+        }
+
+        /* Blocco del singolo progetto */
+        .project-item {
+            margin-bottom: 40px;
+            padding-bottom: 30px;
+            border-bottom: 1px solid #222222;
+        }
+
+        .project-item:last-child {
+            border-bottom: none;
+            margin-bottom: 20px;
+        }
+
+        .project-title {
+            font-size: 1.2rem;
+            line-height: 1.4;
+            margin-bottom: 15px;
+            font-weight: 500;
+            color: #ffffff;
+        }
+
+        .project-text {
+            font-size: 0.95rem;
             line-height: 1.6;
             color: #dddddd;
-            margin-bottom: 30px;
+            margin-bottom: 20px;
             text-align: justify;
+            font-weight: 300;
         }
 
-        .content-card img {
+        /* Griglia Immagini 2x2 (2 foto per riga) */
+        .image-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .image-grid img {
             width: 100%;
-            height: auto;
-            border-radius: 5px;
-            display: block;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 6px;
+            border: 1px solid #333333;
+            transition: transform 0.3s ease, border-color 0.3s ease;
         }
 
-        /* Adattamento per dispositivi mobili */
+        .image-grid img:hover {
+            transform: scale(1.02);
+            border-color: #ffffff;
+        }
+
+        /* Note per sezioni ancora vuote */
+        .empty-section-note {
+            font-size: 0.9rem;
+            color: #666666;
+            font-style: italic;
+            margin-bottom: 20px;
+        }
+
+        /* Adattamento Responsive */
         @media (max-width: 900px) {
             .content-card {
-                width: 80vw; /* Su schermi più piccoli la scheda si allarga per rimanere leggibile */
+                width: 80vw;
                 padding: 30px;
             }
         }
@@ -129,10 +180,16 @@
                 width: 95vw;
                 padding: 20px;
             }
+
+            .image-grid {
+                grid-template-columns: 1fr; /* In versione mobile le foto vanno in colonna singola */
+            }
+
             nav {
                 flex-direction: column;
                 gap: 10px;
             }
+
             h1 {
                 font-size: 2rem;
             }
@@ -142,22 +199,65 @@
 <body>
 
     <header>
-        <h1>Spaceship Earth</h1>
+        <h1>Voyager's Cosmos</h1>
         <nav>
             <a href="intro.html">Intro</a>
-            <a href="projects.html">Projects</a>
-            <a href="stories.html" class="active">Stories</a>
+            <a href="projects.html" class="active">Projects</a>
+            <a href="stories.html">Stories</a>
             <a href="about.html">About</a>
         </nav>
     </header>
 
     <main>
         <div class="content-card">
-            <h2>Envisioning the path towards Deep Space Cities rethinking large-scale space structures |  February 2026</h2>
-            <p>This work present the vision of a roadmap towards the creation of self-sufficient deep space cities in the Sun-Earth lagrangian points. Developed for the 2026 Aurelia Prize in Design for Space Urbanism, the project aimed at design a preliminary concept study of long-term phases for human settlements in deep space</p>
-            
-            <!-- Inserimento dell'immagine -->
-            <img src="deep-1.png" alt="Deep Space Cities Concept">
+
+            <!-- Macro Sezione 1: Deep Space Habitat -->
+            <h2 class="section-header">Deep Space Habitat</h2>
+
+            <!-- Contenuto 1 -->
+            <article class="project-item">
+                <div class="project-title">&gt;&gt; Envisioning the path towards Deep Space Cities rethinking large-scale space structures | February 2026</div>
+                <p class="project-text">
+                    This work present the vision of a roadmap towards the creation of self-sufficient deep space cities in the Sun-Earth lagrangian points. Developed for the 2026 Aurelia Prize in Design for Space Urbanism, the project aimed at design a preliminary concept study of long-term phases for human settlements in deep space.
+                </p>
+
+                <!-- Griglia 2x2 per le Immagini 1, 2, 3, 4 -->
+                <div class="image-grid">
+                    <img src="projects/1.jpg" alt="Deep Space Cities - Preview 1">
+                    <img src="projects/2.jpg" alt="Deep Space Cities - Preview 2">
+                    <img src="projects/3.jpg" alt="Deep Space Cities - Preview 3">
+                    <img src="projects/4.jpg" alt="Deep Space Cities - Preview 4">
+                </div>
+            </article>
+
+            <!-- Contenuto 2 -->
+            <article class="project-item">
+                <div class="project-title">&gt;&gt; Concept study of a generation interstellar spaceship | January-May 2025</div>
+                <p class="project-text">
+                    Concept study developed for the Project Hyperion design competition by the Initiative for Interstellar Studies. My team won the 1st prize of the competition exploring the feasibility of crewed interstellar travel via generation spaceships, using current and near-future technologies. The idea behind a generation ship is that the initial crew would live, reproduce, and die on the ship, with their descendants continuing the journey until reaching the destination. These starships are often envisioned as self-sustaining ecosystems, featuring agriculture, habitation, and other necessary life-support systems to ensure survival across multiple generations. In our research and design exploration our multidisciplinary team aimed to include and integrate in the process all relevant areas of knowledge that could possibly drive the creation of an interstellar starship ark. Engineering, physics, biology, artificial intelligence, cybernetic, urban architecture, psychology, anthropo-sociological and teleological disciplines are among the disciplines that we encompassed in our research.
+                </p>
+
+                <!-- Griglia 2x2 per le Immagini 5, 6, 7, 8 -->
+                <div class="image-grid">
+                    <img src="projects/5.jpg" alt="Interstellar Spaceship - Preview 5">
+                    <img src="projects/6.jpg" alt="Interstellar Spaceship - Preview 6">
+                    <img src="projects/7.jpg" alt="Interstellar Spaceship - Preview 7">
+                    <img src="projects/8.jpg" alt="Interstellar Spaceship - Preview 8">
+                </div>
+            </article>
+
+            <!-- Macro Sezione 2: Exoplanets -->
+            <h2 class="section-header">Exoplanets</h2>
+            <p class="empty-section-note">Projects coming soon...</p>
+
+            <!-- Macro Sezione 3: Earth Observations -->
+            <h2 class="section-header">Earth Observations</h2>
+            <p class="empty-section-note">Projects coming soon...</p>
+
+            <!-- Macro Sezione 4: Physics Lab -->
+            <h2 class="section-header">Physics Lab</h2>
+            <p class="empty-section-note">Projects coming soon...</p>
+
         </div>
     </main>
 
