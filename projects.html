@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects - Voyager's Cosmos</title>
+    <!-- Importazione del font Montserrat per mantenere la coerenza visiva -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&display=swap" rel="stylesheet">
+    <style>
+        /* Reset di base */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Impostazioni del corpo della pagina e dello sfondo */
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-image: url('bg.png'); /* Assicurati che bg.png sia nella stessa cartella */
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            color: #ffffff;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        /* Intestazione in alto con titolo e menu */
+        header {
+            width: 100%;
+            text-align: center;
+            padding: 40px 20px 20px 20px;
+            /* Un leggero sfondo semitrasparente dietro l'header (opzionale) per staccare dal background */
+            background: rgba(0, 0, 0, 0.4); 
+            backdrop-filter: blur(5px);
+        }
+
+        h1 {
+            font-size: 3rem;
+            letter-spacing: 2px;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            font-weight: 300;
+        }
+
+        /* Stile del Menu */
+        nav {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #ffffff;
+            font-size: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            padding: 10px 20px;
+            border: 1px solid #ffffff;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+        }
+
+        /* Effetto hover e stato "attivo" per evidenziare in che pagina ci troviamo */
+        nav a:hover, nav a.active {
+            background-color: #ffffff;
+            color: #000000;
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+        }
+
+        /* Contenitore principale per centrare la scheda */
+        main {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            padding: 40px 20px;
+        }
+
+        /* La scheda nera centrale */
+        .content-card {
+            background-color: #000000;
+            width: 50vw; /* Larga esattamente metà della risoluzione dello schermo */
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.7);
+            text-align: left;
+        }
+
+        .content-card h2 {
+            font-size: 1.5rem;
+            line-height: 1.4;
+            margin-bottom: 20px;
+            font-weight: 400;
+            border-bottom: 1px solid #333;
+            padding-bottom: 15px;
+        }
+
+        .content-card p {
+            font-size: 1rem;
+            line-height: 1.6;
+            color: #dddddd;
+            margin-bottom: 30px;
+            text-align: justify;
+        }
+
+        .content-card img {
+            width: 100%;
+            height: auto;
+            border-radius: 5px;
+            display: block;
+        }
+
+        /* Adattamento per dispositivi mobili */
+        @media (max-width: 900px) {
+            .content-card {
+                width: 80vw; /* Su schermi più piccoli la scheda si allarga per rimanere leggibile */
+                padding: 30px;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .content-card {
+                width: 95vw;
+                padding: 20px;
+            }
+            nav {
+                flex-direction: column;
+                gap: 10px;
+            }
+            h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Voyager's Cosmos</h1>
+        <nav>
+            <a href="index.html">Intro</a>
+            <a href="projects.html" class="active">Projects</a>
+            <a href="about.html">About</a>
+        </nav>
+    </header>
+
+    <main>
+        <div class="content-card">
+            <h2>Envisioning the path towards Deep Space Cities rethinking large-scale space structures |  February 2026</h2>
+            <p>This work present the vision of a roadmap towards the creation of self-sufficient deep space cities in the Sun-Earth lagrangian points. Developed for the 2026 Aurelia Prize in Design for Space Urbanism, the project aimed at design a preliminary concept study of long-term phases for human settlements in deep space</p>
+            
+            <!-- Inserimento dell'immagine -->
+            <img src="deep-1.jpg" alt="Deep Space Cities Concept">
+        </div>
+    </main>
+
+</body>
+</html>
