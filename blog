@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Voyager's Cosmos</title>
+    
+    <!-- Importazione di un font pulito (sans-serif) ed elegante da Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+    
+    <style>
+        /* Reset di base */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body, html {
+            height: 100%;
+            font-family: 'Montserrat', sans-serif; /* Font pulito sans-serif */
+        }
+
+        /* Configurazione dello sfondo fisso */
+        body {
+            background-image: url('zzzzz_2.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+            background-color: #000; /* Colore di fallback scuro */
+        }
+
+        /* Contenitore principale per centrare tutto verticalmente e orizzontalmente */
+        .landing-container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+            width: 100%;
+            /* Leggera ombra di sfondo per far risaltare il testo bianco sull'immagine spaziale */
+            background-color: rgba(0, 0, 0, 0.3); 
+        }
+
+        /* Stile del titolo del blog (opzionale, ma consigliato per l'estetica) */
+        .site-title {
+            color: #ffffff;
+            font-size: 3rem;
+            font-weight: 300;
+            letter-spacing: 0.25em; /* Spaziatura ampia per un look "spaziale" */
+            margin-bottom: 3.5rem;
+            text-align: center;
+            text-shadow: 2px 2px 8px rgba(0,0,0,0.8);
+            text-transform: uppercase;
+        }
+
+        /* Contenitore del menu */
+        .nav-menu {
+            display: flex;
+            gap: 2rem; /* Spazio orizzontale tra i bottoni */
+        }
+
+        /* Stile dei bottoni / link */
+        .nav-btn {
+            display: inline-block;
+            color: #ffffff;
+            text-decoration: none;
+            text-transform: uppercase; /* Testo in maiuscolo */
+            border: 1px solid #ffffff; /* Bordo bianco */
+            padding: 14px 40px;
+            font-size: 0.9rem;
+            font-weight: 400;
+            letter-spacing: 0.15em;
+            background-color: transparent;
+            transition: all 0.4s ease; /* Transizione morbida per l'hover */
+            backdrop-filter: blur(2px); /* Leggero effetto vetro */
+        }
+
+        /* Effetto Hover sui bottoni */
+        .nav-btn:hover {
+            background-color: rgba(255, 255, 255, 0.15); /* Sfondo leggermente bianco */
+            color: #ffffff;
+            box-shadow: 0 0 15px rgba(255, 255, 255, 0.2); /* Leggero bagliore */
+            transform: translateY(-2px); /* Si sposta leggermente in alto */
+        }
+
+        /* Design responsivo per smartphone */
+        @media (max-width: 768px) {
+            .nav-menu {
+                flex-direction: column; /* Impila i bottoni in verticale sui telefoni */
+                gap: 1.5rem;
+            }
+            .site-title {
+                font-size: 2rem;
+                letter-spacing: 0.15em;
+            }
+            .nav-btn {
+                text-align: center;
+                width: 220px; /* Larghezza fissa sui telefoni per uniformità */
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="landing-container">
+        
+        <h1 class="site-title">Voyager's Cosmos</h1>
+        
+        <nav class="nav-menu">
+            <a href="#intro" class="nav-btn">Intro</a>
+            <a href="#projects" class="nav-btn">Projects</a>
+            <a href="#about" class="nav-btn">About</a>
+        </nav>
+
+    </div>
+</body>
+</html>
