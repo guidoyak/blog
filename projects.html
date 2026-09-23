@@ -128,6 +128,12 @@
             color: #ffffff;
         }
 
+        /* Stile azzurro chiaro per la data e il mese */
+        .project-date {
+            color: #88c0ff;
+            font-weight: 400;
+        }
+
         .project-text {
             font-size: 0.95rem;
             line-height: 1.6;
@@ -143,12 +149,20 @@
             grid-template-columns: repeat(2, 1fr);
             gap: 15px;
             margin-top: 20px;
+            align-items: start;
+        }
+
+        .image-grid a {
+            display: block;
+            text-decoration: none;
+            overflow: hidden;
+            border-radius: 6px;
         }
 
         .image-grid img {
             width: 100%;
-            height: 200px;
-            object-fit: cover;
+            height: auto; /* Mantiene le proporzioni originali altezza/larghezza */
+            display: block;
             border-radius: 6px;
             border: 1px solid #333333;
             transition: transform 0.3s ease, border-color 0.3s ease;
@@ -216,33 +230,53 @@
 
             <!-- Contenuto 1 -->
             <article class="project-item">
-                <div class="project-title">&gt;&gt; Envisioning the path towards Deep Space Cities rethinking large-scale space structures | February 2026</div>
+                <div class="project-title">
+                    Envisioning the path towards Deep Space Cities rethinking large-scale space structures | <span class="project-date">February 2026</span>
+                </div>
                 <p class="project-text">
                     This work present the vision of a roadmap towards the creation of self-sufficient deep space cities in the Sun-Earth lagrangian points. Developed for the 2026 Aurelia Prize in Design for Space Urbanism, the project aimed at design a preliminary concept study of long-term phases for human settlements in deep space.
                 </p>
 
-                <!-- Griglia 2x2 per le Immagini 1, 2, 3, 4 (.png) -->
+                <!-- Griglia 2x2 per le Immagini 1, 2, 3, 4 -->
                 <div class="image-grid">
-                    <img src="projects/1.png" alt="Deep Space Cities - Preview 1">
-                    <img src="projects/2.png" alt="Deep Space Cities - Preview 2">
-                    <img src="projects/3.png" alt="Deep Space Cities - Preview 3">
-                    <img src="projects/4.png" alt="Deep Space Cities - Preview 4">
+                    <a href="projects/1.png" target="_blank" title="Apri immagine originale">
+                        <img src="projects/1.png" alt="Deep Space Cities - Preview 1">
+                    </a>
+                    <a href="projects/2.png" target="_blank" title="Apri immagine originale">
+                        <img src="projects/2.png" alt="Deep Space Cities - Preview 2">
+                    </a>
+                    <a href="projects/3.png" target="_blank" title="Apri immagine originale">
+                        <img src="projects/3.png" alt="Deep Space Cities - Preview 3">
+                    </a>
+                    <a href="projects/4.png" target="_blank" title="Apri immagine originale">
+                        <img src="projects/4.png" alt="Deep Space Cities - Preview 4">
+                    </a>
                 </div>
             </article>
 
             <!-- Contenuto 2 -->
             <article class="project-item">
-                <div class="project-title">&gt;&gt; Concept study of a generation interstellar spaceship | January-May 2025</div>
+                <div class="project-title">
+                    Concept study of a generation interstellar spaceship | <span class="project-date">January-May 2025</span>
+                </div>
                 <p class="project-text">
                     Concept study developed for the Project Hyperion design competition by the Initiative for Interstellar Studies. My team won the 1st prize of the competition exploring the feasibility of crewed interstellar travel via generation spaceships, using current and near-future technologies. The idea behind a generation ship is that the initial crew would live, reproduce, and die on the ship, with their descendants continuing the journey until reaching the destination. These starships are often envisioned as self-sustaining ecosystems, featuring agriculture, habitation, and other necessary life-support systems to ensure survival across multiple generations. In our research and design exploration our multidisciplinary team aimed to include and integrate in the process all relevant areas of knowledge that could possibly drive the creation of an interstellar starship ark. Engineering, physics, biology, artificial intelligence, cybernetic, urban architecture, psychology, anthropo-sociological and teleological disciplines are among the disciplines that we encompassed in our research.
                 </p>
 
-                <!-- Griglia 2x2 per le Immagini 5, 6, 7, 8 (.png) -->
+                <!-- Griglia 2x2 per le Immagini 5, 6, 7, 8 -->
                 <div class="image-grid">
-                    <img src="projects/5.png" alt="Interstellar Spaceship - Preview 5">
-                    <img src="projects/6.png" alt="Interstellar Spaceship - Preview 6">
-                    <img src="projects/7.png" alt="Interstellar Spaceship - Preview 7">
-                    <img src="projects/8.png" alt="Interstellar Spaceship - Preview 8">
+                    <a href="projects/5.png" target="_blank" title="Apri immagine originale">
+                        <img src="projects/5.png" alt="Interstellar Spaceship - Preview 5">
+                    </a>
+                    <a href="projects/6.png" target="_blank" title="Apri immagine originale">
+                        <img src="projects/6.png" alt="Interstellar Spaceship - Preview 6">
+                    </a>
+                    <a href="projects/7.png" target="_blank" title="Apri immagine originale">
+                        <img src="projects/7.png" alt="Interstellar Spaceship - Preview 7">
+                    </a>
+                    <a href="projects/8.png" target="_blank" title="Apri immagine originale">
+                        <img src="projects/8.png" alt="Interstellar Spaceship - Preview 8">
+                    </a>
                 </div>
             </article>
 
