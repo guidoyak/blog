@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stories - Voyager's Cosmos</title>
+    <!-- Importazione del font Montserrat -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+    <style>
+        /* Reset di base */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Impostazioni del corpo della pagina e dello sfondo */
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-image: url('bg.png');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            color: #ffffff;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        /* Intestazione in alto con titolo e menu */
+        header {
+            width: 100%;
+            text-align: center;
+            padding: 40px 20px 20px 20px;
+            background: rgba(0, 0, 0, 0.4);
+            backdrop-filter: blur(5px);
+        }
+
+        h1 {
+            font-size: 3rem;
+            letter-spacing: 2px;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            font-weight: 300;
+        }
+
+        /* Stile del Menu */
+        nav {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #ffffff;
+            font-size: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            padding: 10px 20px;
+            border: 1px solid #ffffff;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+        }
+
+        /* Effetto hover e stato attivo */
+        nav a:hover, nav a.active {
+            background-color: #ffffff;
+            color: #000000;
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+        }
+
+        /* Contenitore principale per centrare la scheda */
+        main {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            padding: 40px 20px;
+        }
+
+        /* La scheda nera centrale */
+        .content-card {
+            background-color: #000000;
+            width: 50vw; /* Larga esattamente il 50% dello schermo */
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.7);
+            text-align: left;
+        }
+
+        .main-title {
+            font-size: 1.5rem;
+            line-height: 1.4;
+            margin-bottom: 30px;
+            font-weight: 400;
+            border-bottom: 1px solid #333333;
+            padding-bottom: 15px;
+            letter-spacing: 1px;
+        }
+
+        /* Struttura delle singole storie */
+        .story-item {
+            margin-bottom: 35px;
+            padding-bottom: 30px;
+            border-bottom: 1px solid #222222;
+        }
+
+        .story-item:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+
+        .story-title {
+            font-size: 1.25rem;
+            color: #ffffff;
+            margin-bottom: 6px;
+            font-weight: 500;
+        }
+
+        .story-genre {
+            font-size: 0.9rem;
+            color: #aaaaaa;
+            margin-bottom: 4px;
+            font-style: italic;
+        }
+
+        .story-status {
+            font-size: 0.85rem;
+            color: #888888;
+            margin-bottom: 15px;
+        }
+
+        .excerpt-label {
+            font-size: 0.8rem;
+            letter-spacing: 1.5px;
+            color: #cccccc;
+            margin-bottom: 8px;
+            font-weight: 500;
+        }
+
+        .story-excerpt {
+            font-size: 0.95rem;
+            line-height: 1.7;
+            color: #dddddd;
+            text-align: justify;
+            font-weight: 300;
+            margin-bottom: 15px;
+        }
+
+        .story-excerpt p {
+            margin-bottom: 12px;
+        }
+
+        .story-excerpt p:last-child {
+            margin-bottom: 0;
+        }
+
+        .separator {
+            text-align: center;
+            color: #555555;
+            margin: 10px 0;
+            font-weight: bold;
+        }
+
+        /* Pulsante Richiesta Testo */
+        .download-btn {
+            display: inline-block;
+            margin-top: 5px;
+            font-size: 0.85rem;
+            color: #88c0ff;
+            text-decoration: none;
+            border: 1px solid #335588;
+            padding: 8px 14px;
+            border-radius: 4px;
+            transition: all 0.3s ease;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+
+        .download-btn:hover {
+            background-color: #88c0ff;
+            color: #000000;
+            border-color: #88c0ff;
+            box-shadow: 0 0 10px rgba(136, 192, 255, 0.4);
+        }
+
+        /* Adattamento Responsive */
+        @media (max-width: 900px) {
+            .content-card {
+                width: 80vw;
+                padding: 30px;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .content-card {
+                width: 95vw;
+                padding: 20px;
+            }
+            nav {
+                flex-direction: column;
+                gap: 10px;
+            }
+            h1 {
+                font-size: 2rem;
+            }
+            .main-title {
+                font-size: 1.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Voyager's Cosmos</h1>
+        <nav>
+            <a href="intro.html">Intro</a>
+            <a href="projects.html">Projects</a>
+            <a href="stories.html" class="active">Stories</a>
+            <a href="about.html">About</a>
+        </nav>
+    </header>
+
+    <main>
+        <div class="content-card">
+            
+            <h2 class="main-title">Hard Sci-Fi | Novels | Short Stories | Essays</h2>
+
+            <!-- Storia 1 -->
+            <article class="story-item">
+                <div class="story-title">&gt;&gt; Deep Future Phases of the Interstellar Quest</div>
+                <div class="story-genre">&gt;&gt; Essay / Hard Sci-fi</div>
+                <div class="story-status">&gt;&gt; March 2025 - Currently under review at the Initiative for Interstellar Studies "Principium" magazine</div>
+                
+                <div class="excerpt-label">EXCERPT:</div>
+                <div class="story-excerpt">
+                    <p>
+                        The ultimate consideration in this exploration of deep space artificial biospheres and interstellar travel would be considering a wild possibility: what if the starship biosphere constituted by humans and other biological species would create a symbiosis with autonomous machines and a sentient artificial intelligence embedded in the spaceship infrastructure? A bizarre scenario would be a spaceship whose interior would be constituted by a garden of Eden environment where humans, plants and animals would be preserved in deep space. The spaceship environmental life support systems would be maintained by a central artificial intelligence and all the technological maintenance serviced by autonomous robots and robotic industrial process plants able to self-repair and self-produce any kind of technological need. A kind of spaceship biological zoo able to transfer the biological life to another planetary system and completely managed and maintained by intelligent machines. Biological life would be integrated passively inside the spaceship's technological infrastructure and the entire biosphere would be kept stable and balanced indefinitely across the millenia. The outer shell constituted by the spaceship structure and by the support robotic agents would guarantee the survival of life in the confined interior, resulting in a kind of supercyborg organism, a kind of new hybrid techno-bio creature fit to dwell in deep space. The teleological purpose emerging from the interstellar challenge could lead to a future co-evolution and hybridization of silicon-based machine-infrastructures and artificial intelligences with biological life, transforming the teleological vision of humanity towards new forms of existences, new ways of interpreting consciousness and sentient intelligence that emerged from the atomic matter on the surface of planet Earth.
+                    </p>
+                </div>
+                
+                <a href="mailto:sbrogio.guido@gmail.com?subject=Full%20Text%20Request:%20Deep%20Future%20Phases%20of%20the%20Interstellar%20Quest" class="download-btn">
+                    [ DOWNLOAD FULL TEXT &gt; email request: sbrogio.guido@gmail.com ]
+                </a>
+            </article>
+
+            <!-- Storia 2 -->
+            <article class="story-item">
+                <div class="story-title">&gt;&gt; The Call of the Unknown</div>
+                <div class="story-genre">&gt;&gt; Short Story</div>
+                <div class="story-status">&gt;&gt; March 2025 - Participated at the SETI Institute's "2025 Cosmic Chronicles Literary Award"</div>
+                
+                <div class="excerpt-label">EXCERPT:</div>
+                <div class="story-excerpt">
+                    <p>
+                        We understood that it was not important what life was made of, what kind of matter it was composed of, or on what spatial and temporal scale it existed: it was the purpose, the intention to seek the unknown, the evolution and transformation toward new forms of life and reality that were the driving forces behind intelligence and self-awareness. The abysses of the future were our past: there was no limit to what the creative energy of life could be. The future and the past had merged, and there was no longer any difference between what we could seek and what we were.
+                    </p>
+                    <div class="separator">[ . . . ]</div>
+                    <p>
+                        In the beginning it was not very clear what was happening and what it would mean for the human species and its purpose in the universe. Neither the scientists nor the inventors of the first ASI (Artificial Super Intelligence), which was being developed by industrial corporations and government control task forces, could have anticipated what would happen. Nor could the control algorithms used to monitor and mitigate unexpected dynamics. ASIs slowly took the place of humans in production chains, decision-making and even scientific research. Every area of human society became increasingly automated by machines. They learned to build themselves and improve every area of technology and engineering. They multiplied everything that the human species was capable of doing at an ever-increasing rate. The entire planet Earth was transformed into a continuous source of data for the ASIs. Internet networks became a single hyperconnected noosphere penetrating human and ecological systems through billions of sensors scattered across planet Earth and in every single constructed element. We humans lost control of our future and felt no longer the protagonists of the flow of complex life that began hundreds of millions of years ago. Something of unimaginable complexity was emerging. ASIs autonomously created powerful quantum supercomputers, new systems of algorithms with billions of levels of depth, continuously improving their capabilities and power in every field and concept known to humans. In their hyperconnected network of thousands of quantum supercomputers, an intelligent superorganism was emerging.
+                    </p>
+                </div>
+                
+                <a href="mailto:sbrogio.guido@gmail.com?subject=Full%20Text%20Request:%20The%20Call%20of%20the%20Unknown" class="download-btn">
+                    [ DOWNLOAD FULL TEXT &gt; email request: sbrogio.guido@gmail.com ]
+                </a>
+            </article>
+
+        </div>
+    </main>
+
+</body>
+</html>
