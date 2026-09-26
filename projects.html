@@ -173,7 +173,7 @@
             border-color: #ffffff;
         }
         
-        /* Nuova Griglia Immagini 4 colonne (4 foto in una riga) */
+        /* Griglia Immagini 4 colonne (4 foto in una riga) */
         .image-grid-4 {
             display: grid;
             grid-template-columns: repeat(4, 1fr);
@@ -205,7 +205,7 @@
             position: relative;
         }
 
-        /* Nuova Griglia Immagini 5 colonne (5 foto in una riga) */
+        /* Griglia Immagini 5 colonne (5 foto in una riga) */
         .image-grid-5 {
             display: grid;
             grid-template-columns: repeat(5, 1fr);
@@ -254,7 +254,6 @@
         }
 
         @media (max-width: 768px) {
-            /* Adattamento griglie per tablet */
             .image-grid-4 {
                 grid-template-columns: repeat(2, 1fr);
             }
@@ -270,7 +269,7 @@
             }
 
             .image-grid, .image-grid-4, .image-grid-5 {
-                grid-template-columns: 1fr; /* In versione mobile le foto vanno in colonna singola */
+                grid-template-columns: 1fr;
             }
 
             nav {
@@ -353,11 +352,40 @@
                     </a>
                 </div>
             </article>
+
+            <!-- Contenuto 3 -->
+            <article class="project-item">
+                <div class="project-title">
+                    Preliminary Design Review of a Lunar space mission | <span class="project-date">May - October 2024</span>
+                </div>
+                <p class="project-text">
+                    Preliminary design of the mission DEMETRA (Demonstration of Experimental Martian Exploration Technologies in a Relevant Architecture) concluded with the final presentation at the ESA - ESTEC Concurrent Design Facility (CDF). DEMETRA has been conceived in "Moon2Mars" roadmap for crewed exploration of deep space, with the aim of test technologies, operations and capabilities on the Moon to in order to develop and design future human mission to Mars.
+                </p>
+                <p class="project-text">
+                    The SEEDS program is supported by ESA, ASI, CNES and Thales Alenia Space and it is composed of 2 months in each university: Politecnico di Torino (Italy), University of Leicester (UK) and ISAE Supaero (Toulouse), under the tutoring of the European Space Agency, Thales Alenia Space and the Italian Space Agency. The final presentation is programmed to be held at the European Space Research and Technology Centre (ESTEC).
+                </p>
+
+                <!-- Griglia 2x2 per le Immagini 1d, 2d, 3d, 4d -->
+                <div class="image-grid">
+                    <a href="projects/1d.png" target="_blank" title="Apri immagine originale">
+                        <img src="projects/1d.png" alt="DEMETRA Mission - Preview 1">
+                    </a>
+                    <a href="projects/2d.png" target="_blank" title="Apri immagine originale">
+                        <img src="projects/2d.png" alt="DEMETRA Mission - Preview 2">
+                    </a>
+                    <a href="projects/3d.png" target="_blank" title="Apri immagine originale">
+                        <img src="projects/3d.png" alt="DEMETRA Mission - Preview 3">
+                    </a>
+                    <a href="projects/4d.png" target="_blank" title="Apri immagine originale">
+                        <img src="projects/4d.png" alt="DEMETRA Mission - Preview 4">
+                    </a>
+                </div>
+            </article>
             
             <!-- Macro Sezione 2: Space Economy -->
             <h2 class="section-header">Space Economy</h2>
 
-            <!-- Contenuto 3 -->
+            <!-- Contenuto 4 -->
             <article class="project-item">
                 <div class="project-title">
                     Orbital coexistence: preventing LEO ecosystem failure through multilateral special orbital economic zone | <span class="project-date">May-June 2026</span>
@@ -400,7 +428,7 @@
             <!-- Macro Sezione 4: Earth Observations -->
             <h2 class="section-header">Earth Observations</h2>
             
-            <!-- Contenuto 4 -->
+            <!-- Contenuto 5 -->
             <article class="project-item">
                 <div class="project-title">
                     Center of mass estimation and calibration strategies for the Next Generation Gravity Mission (NGGM) | <span class="project-date">October 2023 - April 2024</span>
@@ -429,7 +457,7 @@
             <!-- Macro Sezione 5: Physics Lab -->
             <h2 class="section-header">Physics Lab</h2>
             
-            <!-- Contenuto 5 -->
+            <!-- Contenuto 6 -->
             <article class="project-item">
                 <div class="project-title">
                     Design and construction of a microdosimetric detector for the International Space Station (ISS) | <span class="project-date">September 2010 - April 2011</span>
