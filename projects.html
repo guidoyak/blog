@@ -96,7 +96,7 @@
             font-size: 1.8rem;
             font-weight: 400;
             color: #ffffff;
-            margin-top: 30px;
+            margin-top: 40px;
             margin-bottom: 25px;
             border-bottom: 2px solid #444444;
             padding-bottom: 10px;
@@ -173,6 +173,38 @@
             border-color: #ffffff;
         }
 
+        /* Nuova Griglia Immagini 5 colonne (5 foto in una riga) */
+        .image-grid-5 {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 10px;
+            margin-top: 20px;
+            align-items: start;
+        }
+
+        .image-grid-5 a {
+            display: block;
+            text-decoration: none;
+            overflow: hidden;
+            border-radius: 6px;
+        }
+
+        .image-grid-5 img {
+            width: 100%;
+            height: auto;
+            display: block;
+            border-radius: 6px;
+            border: 1px solid #333333;
+            transition: transform 0.3s ease, border-color 0.3s ease;
+        }
+
+        .image-grid-5 img:hover {
+            transform: scale(1.05);
+            border-color: #ffffff;
+            z-index: 10;
+            position: relative;
+        }
+
         /* Note per sezioni ancora vuote */
         .empty-section-note {
             font-size: 0.9rem;
@@ -182,10 +214,17 @@
         }
 
         /* Adattamento Responsive */
-        @media (max-width: 900px) {
+        @media (max-width: 1024px) {
             .content-card {
                 width: 80vw;
                 padding: 30px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            /* Su tablet le 5 immagini diventano a scorrimento o vanno a capo, qui le mandiamo a capo */
+            .image-grid-5 {
+                grid-template-columns: repeat(3, 1fr);
             }
         }
 
@@ -195,7 +234,7 @@
                 padding: 20px;
             }
 
-            .image-grid {
+            .image-grid, .image-grid-5 {
                 grid-template-columns: 1fr; /* In versione mobile le foto vanno in colonna singola */
             }
 
@@ -239,17 +278,17 @@
 
                 <!-- Griglia 2x2 per le Immagini 1, 2, 3, 4 -->
                 <div class="image-grid">
-                    <a href="projects/5.png" target="_blank" title="Apri immagine originale">
-                        <img src="projects/5.png" alt="Deep Space Cities - Preview 1">
+                    <a href="projects/1.png" target="_blank" title="Apri immagine originale">
+                        <img src="projects/1.png" alt="Deep Space Cities - Preview 1">
                     </a>
-                    <a href="projects/6.png" target="_blank" title="Apri immagine originale">
-                        <img src="projects/6.png" alt="Deep Space Cities - Preview 2">
+                    <a href="projects/2.png" target="_blank" title="Apri immagine originale">
+                        <img src="projects/2.png" alt="Deep Space Cities - Preview 2">
                     </a>
-                    <a href="projects/7.png" target="_blank" title="Apri immagine originale">
-                        <img src="projects/7.png" alt="Deep Space Cities - Preview 3">
+                    <a href="projects/3.png" target="_blank" title="Apri immagine originale">
+                        <img src="projects/3.png" alt="Deep Space Cities - Preview 3">
                     </a>
-                    <a href="projects/8.png" target="_blank" title="Apri immagine originale">
-                        <img src="projects/8.png" alt="Deep Space Cities - Preview 4">
+                    <a href="projects/4.png" target="_blank" title="Apri immagine originale">
+                        <img src="projects/4.png" alt="Deep Space Cities - Preview 4">
                     </a>
                 </div>
             </article>
@@ -265,31 +304,66 @@
 
                 <!-- Griglia 2x2 per le Immagini 5, 6, 7, 8 -->
                 <div class="image-grid">
-                    <a href="projects/1.png" target="_blank" title="Apri immagine originale">
-                        <img src="projects/1.png" alt="Interstellar Spaceship - Preview 5">
+                    <a href="projects/5.png" target="_blank" title="Apri immagine originale">
+                        <img src="projects/5.png" alt="Interstellar Spaceship - Preview 5">
                     </a>
-                    <a href="projects/2.png" target="_blank" title="Apri immagine originale">
-                        <img src="projects/2.png" alt="Interstellar Spaceship - Preview 6">
+                    <a href="projects/6.png" target="_blank" title="Apri immagine originale">
+                        <img src="projects/6.png" alt="Interstellar Spaceship - Preview 6">
                     </a>
-                    <a href="projects/3.png" target="_blank" title="Apri immagine originale">
-                        <img src="projects/3.png" alt="Interstellar Spaceship - Preview 7">
+                    <a href="projects/7.png" target="_blank" title="Apri immagine originale">
+                        <img src="projects/7.png" alt="Interstellar Spaceship - Preview 7">
                     </a>
-                    <a href="projects/4.png" target="_blank" title="Apri immagine originale">
-                        <img src="projects/4.png" alt="Interstellar Spaceship - Preview 8">
+                    <a href="projects/8.png" target="_blank" title="Apri immagine originale">
+                        <img src="projects/8.png" alt="Interstellar Spaceship - Preview 8">
+                    </a>
+                </div>
+            </article>
+            
+            <!-- Macro Sezione 2: Space Economy -->
+            <h2 class="section-header">Space Economy</h2>
+
+            <!-- Contenuto 3 -->
+            <article class="project-item">
+                <div class="project-title">
+                    Orbital coexistence: preventing LEO ecosystem failure through multilateral special orbital economic zone | <span class="project-date">May-June 2026</span>
+                </div>
+                <p class="project-text">
+                    The projected $1.8 trillion space economy by 2035 comes with an ever-increasing risk of collapse of the Earth-orbiting ecosystem. The primary causes of a future Kessler syndrome scenario that will render LEO orbits unusable for decades are multiple and interconnected: the impending proliferation of mega-constellations, the incompatible use of orbital slots by competing nations, the increasingly hybrid (civilian-military) use of space assets and infrastructure and their central role in geopolitical dynamics, as well as the lack of a unified orbital traffic management system.
+                </p>
+                <p class="project-text">
+                    This proposal aims to establish a new model of shared governance in Earth’s orbits as a prerequisite for the long-term sustainable development of human civilization on Earth and the peaceful expansion of humanity to the Moon, Mars, and beyond. The ITU World Radiocommunication Conference 2027 (WRC-27), which will take place in Shanghai this October, will be pivotal in shaping the future of international relations and diplomacy regarding Earth’s orbital space. The major spacefaring nations must decide whether to embark on a new era of cooperation and coexistence in outer space or continue on a path of uncontrolled, competitive growth, which is destined to cause the collapse of the orbital ecosystem.
+                </p>
+                <p class="project-text">
+                    The proposed strategy involves establishing a new model for international governance and a co-financed international commercial initiative aimed at creating the first International Solar-powered Orbital Grid that will use massive, space-based solar arrays to harvest uninterrupted sunlight, converting it into laser/microwaves to beam down to Earth's power grids or to in-orbit infrastructure. 
+                    Through a limited multilateral executive agreement, spacefaring member states will establish an International Space Agency with special jurisdiction over specific economic zones in Medium Earth Orbit (MEO) orbital slots. These zones will enable the creation of the ISOG satellite infrastructure, which aims to promote economic interdependence among nations with space programs and distribute the benefits of space resources to various private actors and nations worldwide.
+                </p>
+
+                <!-- Griglia a 5 colonne per le Immagini da 1a a 5a -->
+                <div class="image-grid-5">
+                    <a href="projects/1a.png" target="_blank" title="Apri immagine originale">
+                        <img src="projects/1a.png" alt="Orbital coexistence - Preview 1">
+                    </a>
+                    <a href="projects/2a.png" target="_blank" title="Apri immagine originale">
+                        <img src="projects/2a.png" alt="Orbital coexistence - Preview 2">
+                    </a>
+                    <a href="projects/3a.png" target="_blank" title="Apri immagine originale">
+                        <img src="projects/3a.png" alt="Orbital coexistence - Preview 3">
+                    </a>
+                    <a href="projects/4a.png" target="_blank" title="Apri immagine originale">
+                        <img src="projects/4a.png" alt="Orbital coexistence - Preview 4">
+                    </a>
+                    <a href="projects/5a.png" target="_blank" title="Apri immagine originale">
+                        <img src="projects/5a.png" alt="Orbital coexistence - Preview 5">
                     </a>
                 </div>
             </article>
 
-            <!-- Macro Sezione 2: Exoplanets -->
+            <!-- Macro Sezione 3: Exoplanets -->
             <h2 class="section-header">Exoplanets</h2>
             <p class="empty-section-note">Projects coming soon...</p>
 
-            <!-- Macro Sezione 3: Earth Observations -->
+            <!-- Macro Sezione 4: Earth Observations -->
             <h2 class="section-header">Earth Observations</h2>
-            <p class="empty-section-note">Projects coming soon...</p>
-
-            <!-- Macro Sezione 4: Space Economy -->
-            <h2 class="section-header">Space Economy</h2>
             <p class="empty-section-note">Projects coming soon...</p>
 
             <!-- Macro Sezione 5: Physics Lab -->
