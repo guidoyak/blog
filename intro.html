@@ -95,21 +95,33 @@
         .intro-quote {
             text-align: center;
             font-style: italic;
-            font-size: 1.6rem;
+            font-size: 1.2rem; /* Dimensione ridotta */
             font-weight: 300;
             color: #ffffff;
             line-height: 1.5;
-            margin-bottom: 30px;
+            margin-bottom: 25px;
             letter-spacing: 1px;
         }
 
-        /* Testo generico della pagina intro */
-        .intro-text {
-            font-size: 1rem;
-            line-height: 1.7;
-            color: #dddddd;
-            text-align: justify;
-            font-weight: 300;
+        /* Contenitore responsivo per il video */
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%; /* Proporzione 16:9 */
+            height: 0;
+            overflow: hidden;
+            max-width: 100%;
+            background: #111111;
+            border-radius: 6px;
+            border: 1px solid #333333;
+        }
+
+        .video-container iframe,
+        .video-container video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
         }
 
         /* Adattamento Responsive */
@@ -126,7 +138,7 @@
                 padding: 20px;
             }
             .intro-quote {
-                font-size: 1.3rem;
+                font-size: 1rem;
             }
             nav {
                 flex-direction: column;
@@ -156,9 +168,10 @@
             <!-- Titolo centrato in corsivo -->
             <h2 class="intro-quote">We are alien astronauts in a journey across the galaxy and the universe</h2>
 
-            <!-- Eventuale testo aggiuntivo (inseriscilo all'interno di <p>) -->
-            <div class="intro-text">
-                <!-- <p>Incolla qui il resto del tuo testo introduttivo, se presente.</p> -->
+            <!-- Contenitore Video -->
+            <div class="video-container">
+                <!-- Sostituisci questo iframe con il codice del tuo video originale -->
+                <iframe src="https://www.youtube.com/embed/INSERISCI_ID_VIDEO" title="Video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </div>
 
         </div>
