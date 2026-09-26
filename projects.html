@@ -161,7 +161,7 @@
 
         .image-grid img {
             width: 100%;
-            height: auto; /* Mantiene le proporzioni originali altezza/larghezza */
+            height: auto;
             display: block;
             border-radius: 6px;
             border: 1px solid #333333;
@@ -171,6 +171,38 @@
         .image-grid img:hover {
             transform: scale(1.02);
             border-color: #ffffff;
+        }
+        
+        /* Nuova Griglia Immagini 4 colonne (4 foto in una riga) */
+        .image-grid-4 {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 15px;
+            margin-top: 20px;
+            align-items: start;
+        }
+
+        .image-grid-4 a {
+            display: block;
+            text-decoration: none;
+            overflow: hidden;
+            border-radius: 6px;
+        }
+
+        .image-grid-4 img {
+            width: 100%;
+            height: auto;
+            display: block;
+            border-radius: 6px;
+            border: 1px solid #333333;
+            transition: transform 0.3s ease, border-color 0.3s ease;
+        }
+
+        .image-grid-4 img:hover {
+            transform: scale(1.05);
+            border-color: #ffffff;
+            z-index: 10;
+            position: relative;
         }
 
         /* Nuova Griglia Immagini 5 colonne (5 foto in una riga) */
@@ -222,7 +254,10 @@
         }
 
         @media (max-width: 768px) {
-            /* Su tablet le 5 immagini diventano a scorrimento o vanno a capo, qui le mandiamo a capo */
+            /* Adattamento griglie per tablet */
+            .image-grid-4 {
+                grid-template-columns: repeat(2, 1fr);
+            }
             .image-grid-5 {
                 grid-template-columns: repeat(3, 1fr);
             }
@@ -234,7 +269,7 @@
                 padding: 20px;
             }
 
-            .image-grid, .image-grid-5 {
+            .image-grid, .image-grid-4, .image-grid-5 {
                 grid-template-columns: 1fr; /* In versione mobile le foto vanno in colonna singola */
             }
 
@@ -364,7 +399,32 @@
 
             <!-- Macro Sezione 4: Earth Observations -->
             <h2 class="section-header">Earth Observations</h2>
-            <p class="empty-section-note">Projects coming soon...</p>
+            
+            <!-- Contenuto 4 -->
+            <article class="project-item">
+                <div class="project-title">
+                    Center of mass estimation and calibration strategies for the Next Generation Gravity Mission (NGGM) | <span class="project-date">October 2023 - April 2024</span>
+                </div>
+                <p class="project-text">
+                    Research project @ Thales Alenia Space (Turin): as a science performance specialist, I contributed to the development of calibration strategies for the ESA/NASA Next Generation Gravity Mission (NGGM) of the MAGIC constellation. My work involved studying the measurement performance of NGGM’s two mission observables, researching novel approaches to calibration solutions and adapting heritage calibration solutions from flown missions to the precise design characteristics of the NGGM mission.
+                </p>
+                
+                <!-- Griglia a 4 colonne per le Immagini da 1b a 4b -->
+                <div class="image-grid-4">
+                    <a href="projects/1b.png" target="_blank" title="Apri immagine originale">
+                        <img src="projects/1b.png" alt="NGGM - Preview 1">
+                    </a>
+                    <a href="projects/2b.png" target="_blank" title="Apri immagine originale">
+                        <img src="projects/2b.png" alt="NGGM - Preview 2">
+                    </a>
+                    <a href="projects/3b.png" target="_blank" title="Apri immagine originale">
+                        <img src="projects/3b.png" alt="NGGM - Preview 3">
+                    </a>
+                    <a href="projects/4b.png" target="_blank" title="Apri immagine originale">
+                        <img src="projects/4b.png" alt="NGGM - Preview 4">
+                    </a>
+                </div>
+            </article>
 
             <!-- Macro Sezione 5: Physics Lab -->
             <h2 class="section-header">Physics Lab</h2>
