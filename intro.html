@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Intro - Voyager's Cosmos</title>
     <!-- Importazione del font Montserrat -->
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
     <style>
         /* Reset di base */
         * {
@@ -84,46 +84,35 @@
         /* La scheda nera centrale */
         .content-card {
             background-color: #000000;
-            width: 50vw; /* Larga esattamente il 50% dello schermo */
+            width: 50vw; /* Larga il 50% dello schermo */
             padding: 40px;
             border-radius: 8px;
             box-shadow: 0 15px 40px rgba(0, 0, 0, 0.7);
             text-align: left;
         }
 
-        .content-card h2 {
-            font-size: 1.8rem;
-            line-height: 1.4;
-            margin-bottom: 15px;
-            font-weight: 400;
-            border-bottom: 1px solid #333;
-            padding-bottom: 15px;
+        /* Stile per la citazione introduttiva */
+        .intro-quote {
+            text-align: center;
+            font-style: italic;
+            font-size: 1.6rem;
+            font-weight: 300;
+            color: #ffffff;
+            line-height: 1.5;
+            margin-bottom: 30px;
+            letter-spacing: 1px;
         }
 
-        .content-card p {
+        /* Testo generico della pagina intro */
+        .intro-text {
             font-size: 1rem;
-            line-height: 1.6;
+            line-height: 1.7;
             color: #dddddd;
-            margin-bottom: 25px;
+            text-align: justify;
+            font-weight: 300;
         }
 
-        /* Contenitore responsive per il video YouTube (16:9) */
-        .video-container {
-            position: relative;
-            width: 100%;
-            aspect-ratio: 16 / 9;
-            border-radius: 6px;
-            overflow: hidden;
-            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
-        }
-
-        .video-container iframe {
-            width: 100%;
-            height: 100%;
-            border: 0;
-        }
-
-        /* Adattamento per dispositivi mobili */
+        /* Adattamento Responsive */
         @media (max-width: 900px) {
             .content-card {
                 width: 80vw;
@@ -135,6 +124,9 @@
             .content-card {
                 width: 95vw;
                 padding: 20px;
+            }
+            .intro-quote {
+                font-size: 1.3rem;
             }
             nav {
                 flex-direction: column;
@@ -149,7 +141,7 @@
 <body>
 
     <header>
-        <h1>Spaceship Earth</h1>
+        <h1>Voyager's Cosmos</h1>
         <nav>
             <a href="intro.html" class="active">Intro</a>
             <a href="projects.html">Projects</a>
@@ -160,18 +152,15 @@
 
     <main>
         <div class="content-card">
-    
             
-            <!-- Contenitore Video YouTube -->
-            <div class="video-container">
-                <!-- Sostituisci "ID_DEL_VIDEO" con il codice identificativo del tuo video YouTube -->
-                <iframe 
-                    src="https://www.youtube.com/embed/OmrTcJAPpMI" 
-                    title="YouTube video player" 
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                    allowfullscreen>
-                </iframe>
+            <!-- Titolo centrato in corsivo -->
+            <h2 class="intro-quote">We are alien astronauts in a journey across the galaxy and the universe</h2>
+
+            <!-- Eventuale testo aggiuntivo (inseriscilo all'interno di <p>) -->
+            <div class="intro-text">
+                <!-- <p>Incolla qui il resto del tuo testo introduttivo, se presente.</p> -->
             </div>
+
         </div>
     </main>
 
